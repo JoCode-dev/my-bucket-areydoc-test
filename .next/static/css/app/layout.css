@@ -506,8 +506,15 @@ video {
 .m-0 {
   margin: 0px;
 }
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .flex {
   display: flex;
+}
+.hidden {
+  display: none;
 }
 .h-4 {
   height: 1rem;
@@ -526,6 +533,15 @@ video {
 }
 .w-screen {
   width: 100vw;
+}
+.w-52 {
+  width: 13rem;
+}
+.w-full {
+  width: 100%;
+}
+.w-\[20vw\] {
+  width: 20vw;
 }
 .shrink-0 {
   flex-shrink: 0;
@@ -549,17 +565,28 @@ video {
   margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
 }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
 .rounded-sm {
   border-radius: 0.125rem;
 }
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .border {
   border-width: 1px;
 }
 .border-2 {
   border-width: 2px;
+}
+.border-dashed {
+  border-style: dashed;
 }
 .border-slate-200 {
   --tw-border-opacity: 1;
@@ -568,6 +595,10 @@ video {
 .border-slate-900 {
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
+}
+.border-zinc-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -581,6 +612,9 @@ video {
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .pt-0 {
   padding-top: 0px;
@@ -613,6 +647,9 @@ video {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline {
+  outline-style: solid;
 }
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
@@ -666,6 +703,10 @@ video {
 .dark\:border-slate-800:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+.dark\:border-zinc-800:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 42 / var(--tw-border-opacity));
 }
 .dark\:bg-neutral-900\/50:is(.dark *) {
   background-color: rgb(23 23 23 / 0.5);

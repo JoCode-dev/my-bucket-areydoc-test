@@ -1,6 +1,6 @@
 "use client"
 import Navbar from "@/components/ui/navbar";
-import UploadModal from "@/components/ui/upload-modal";
+import UploadModal from "@/components/upload/upload-modal";
 import useModal from "@/hooks/useModal";
 import { useEffect } from "react";
 
