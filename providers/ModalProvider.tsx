@@ -1,23 +1,17 @@
 "use client";
+import { ModalContext, ModalProviderProps } from "@/hooks/useModal";
+import { useState } from "react";
 
-import { useEffect, useState } from "react";
+export const ModalProvider = ({ children }: ModalProviderProps) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-const ModalProvider = () => {
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, [])
-
-    if(!isMounted){
-        return null;
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
     }
 
-    return(
-        <>
-            Modal!
-        </>
-    )
+    return (
+        <ModalContext.Provider value={{ isOpen, toggleModal }}>
+            {children}
+        </ModalContext.Provider>
+    );
 }
-
-export default ModalProvider;

@@ -5,6 +5,8 @@ import "./globals.css";
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from "next-themes";
+import { ModalProvider } from "@/providers/ModalProvider";
+
 
 const poppins = Poppins({ weight: ["300"], subsets: ['latin'] });
 
@@ -26,7 +28,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem>
           <Theme>
-            {children}
+            <ModalProvider>
+              {children}
+            </ModalProvider>
           </Theme>
         </ThemeProvider>
       </body>

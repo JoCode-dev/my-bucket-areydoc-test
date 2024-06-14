@@ -497,198 +497,231 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-  .fixed {
+.fixed {
   position: fixed;
 }
-  .inset-0 {
+.inset-0 {
   inset: 0px;
 }
-  .flex {
+.m-0 {
+  margin: 0px;
+}
+.flex {
   display: flex;
 }
-  .h-4 {
+.h-4 {
   height: 1rem;
 }
-  .min-h-screen {
+.h-7 {
+  height: 1.75rem;
+}
+.min-h-screen {
   min-height: 100vh;
 }
-  .w-4 {
+.w-4 {
   width: 1rem;
 }
-  .w-screen {
+.w-7 {
+  width: 1.75rem;
+}
+.w-screen {
   width: 100vw;
 }
-  .shrink-0 {
+.shrink-0 {
   flex-shrink: 0;
 }
-  .flex-col {
+.flex-col {
   flex-direction: column;
 }
-  .items-center {
+.items-center {
   align-items: center;
 }
-  .justify-center {
+.justify-center {
   justify-content: center;
 }
-  .space-y-1 > :not([hidden]) ~ :not([hidden]) {
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
-  .space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
 }
-  .rounded-sm {
+.rounded-sm {
   border-radius: 0.125rem;
 }
-  .rounded-xl {
+.rounded-xl {
   border-radius: 0.75rem;
 }
-  .border {
+.border {
   border-width: 1px;
 }
-  .border-2 {
+.border-2 {
   border-width: 2px;
 }
-  .border-slate-200 {
+.border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
-  .border-slate-900 {
+.border-slate-900 {
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
 }
-  .bg-white {
+.bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-  .bg-zinc-200\/50 {
+.bg-zinc-200\/50 {
   background-color: rgb(228 228 231 / 0.5);
 }
-  .p-3 {
-  padding: 0.75rem;
-}
-  .p-6 {
-  padding: 1.5rem;
-}
-  .p-5 {
+.p-5 {
   padding: 1.25rem;
 }
-  .pt-0 {
+.p-6 {
+  padding: 1.5rem;
+}
+.pt-0 {
   padding-top: 0px;
 }
-  .text-sm {
+.text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-  .font-semibold {
+.font-semibold {
   font-weight: 600;
 }
-  .leading-none {
+.leading-none {
   line-height: 1;
 }
-  .tracking-tight {
+.tracking-tight {
   letter-spacing: -0.025em;
 }
-  .text-current {
+.text-current {
   color: currentColor;
 }
-  .text-slate-500 {
+.text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
-  .text-slate-950 {
+.text-slate-950 {
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity));
 }
-  .shadow {
+.shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-  .backdrop-blur-sm {
+.backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-  @keyframes enter {
+@keyframes enter {
 
   from {
     opacity: var(--tw-enter-opacity, 1);
     transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
   }
 }
-  @keyframes exit {
+@keyframes exit {
 
   to {
     opacity: var(--tw-exit-opacity, 1);
     transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
   }
 }
-  .focus-visible\:outline-none:focus-visible {
+.focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-  .focus-visible\:ring-1:focus-visible {
+.focus-visible\:ring-1:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-  .focus-visible\:ring-slate-950:focus-visible {
+.focus-visible\:ring-slate-950:focus-visible {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(2 6 23 / var(--tw-ring-opacity));
 }
-  .disabled\:cursor-not-allowed:disabled {
+.disabled\:cursor-not-allowed:disabled {
   cursor: not-allowed;
 }
-  .disabled\:opacity-50:disabled {
+.disabled\:opacity-50:disabled {
   opacity: 0.5;
 }
-  .data-\[state\=checked\]\:bg-slate-900[data-state=checked] {
+.data-\[state\=checked\]\:bg-slate-900[data-state=checked] {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
-  .data-\[state\=checked\]\:text-slate-50[data-state=checked] {
+.data-\[state\=checked\]\:text-slate-50[data-state=checked] {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
-  .dark\:border-slate-50:is(.dark *) {
+.dark\:border-slate-50:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(248 250 252 / var(--tw-border-opacity));
 }
-  .dark\:border-slate-800:is(.dark *) {
+.dark\:border-slate-800:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
-  .dark\:bg-neutral-900\/50:is(.dark *) {
+.dark\:bg-neutral-900\/50:is(.dark *) {
   background-color: rgb(23 23 23 / 0.5);
 }
-  .dark\:bg-slate-950:is(.dark *) {
+.dark\:bg-slate-950:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
-  .dark\:text-slate-400:is(.dark *) {
+.dark\:text-slate-400:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
-  .dark\:text-slate-50:is(.dark *) {
+.dark\:text-slate-50:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
-  .dark\:focus-visible\:ring-slate-300:focus-visible:is(.dark *) {
+.dark\:invert:is(.dark *) {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.dark\:focus-visible\:ring-slate-300:focus-visible:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(203 213 225 / var(--tw-ring-opacity));
 }
-  .dark\:data-\[state\=checked\]\:bg-slate-50[data-state=checked]:is(.dark *) {
+.dark\:data-\[state\=checked\]\:bg-slate-50[data-state=checked]:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
-  .dark\:data-\[state\=checked\]\:text-slate-900[data-state=checked]:is(.dark *) {
+.dark\:data-\[state\=checked\]\:text-slate-900[data-state=checked]:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
-  
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Poppins","arguments":[{"weight":["300"],"subsets":["latin"]}],"variableName":"poppins"} ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin-ext */
+@font-face {
+  font-family: '__Poppins_a8c47d';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/_next/static/media/8d346445d24062b5-s.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: '__Poppins_a8c47d';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/_next/static/media/4c285fdca692ea22-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__Poppins_Fallback_a8c47d';src: local("Arial");ascent-override: 93.62%;descent-override: 31.21%;line-gap-override: 8.92%;size-adjust: 112.16%
+}.__className_a8c47d {font-family: '__Poppins_a8c47d', '__Poppins_Fallback_a8c47d';font-weight: 300;font-style: normal
+}
+
 /*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/@radix-ui/themes/styles.css ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************/
@@ -27322,29 +27355,5 @@ video {
   .xl\:rt-r-va-bottom {
     vertical-align: bottom;
   }
-}
-
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Poppins","arguments":[{"weight":["300"],"subsets":["latin"]}],"variableName":"poppins"} ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/* latin-ext */
-@font-face {
-  font-family: '__Poppins_a8c47d';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/_next/static/media/8d346445d24062b5-s.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: '__Poppins_a8c47d';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/_next/static/media/4c285fdca692ea22-s.p.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}@font-face {font-family: '__Poppins_Fallback_a8c47d';src: local("Arial");ascent-override: 93.62%;descent-override: 31.21%;line-gap-override: 8.92%;size-adjust: 112.16%
-}.__className_a8c47d {font-family: '__Poppins_a8c47d', '__Poppins_Fallback_a8c47d';font-weight: 300;font-style: normal
 }
 

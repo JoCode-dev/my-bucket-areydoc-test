@@ -1,25 +1,20 @@
 "use client"
 import Navbar from "@/components/ui/navbar";
 import UploadModal from "@/components/ui/upload-modal";
-import { Button } from "@radix-ui/themes";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import useModal from "@/hooks/useModal";
+import { useEffect } from "react";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
-  const toggleMode = () => setTheme(theme == 'light' ? 'dark' : 'light');
+
+  const { isOpen, toggleModal } = useModal();
 
   return (
-    <main className="min-h-screen border-2">
+    <main className="min-h-screen">
       <Navbar />
 
-      <UploadModal />
+      <UploadModal isOpen={isOpen} onChange={toggleModal} />
 
-      <div className="border-2 p-3">
-        <Button onClick={toggleMode}>
-          Toggle Theme
-        </Button>
-      </div>
+      {isOpen && <div>Hello Div is OPEN</div>}
     </main>
   );
 }
