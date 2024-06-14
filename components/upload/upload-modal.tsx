@@ -11,10 +11,14 @@ interface UploadModalProps {
 }
 
 const UploadModal: React.FC<UploadModalProps> = ({ isOpen, onChange }) => {
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const [file, setFile] = useState<string>("");
-    const [fileEnter, setFileEnter] = useState(false);
+    const [file, setFile] = useState<string | null>(null);
+    const [fileEnter, setFileEnter] = useState<boolean>(false);
+
+    const uploadFile = async () => {
+        console.log(file);
+    }
 
     return (
         <Dialog.Root
@@ -34,10 +38,11 @@ const UploadModal: React.FC<UploadModalProps> = ({ isOpen, onChange }) => {
                         setFile={setFile}
                         fileEnter={fileEnter}
                         setFileEnter={setFileEnter}
+                        isLoading
                     />
 
                     <Flex align="center" justify="center" direction="column" mt="5">
-                        <Button className="w-[20vw]" size={"2"}>
+                        <Button className="w-[20vw]" size={"2"} onClick={uploadFile}>
                             Let's go!
                             <Spinner loading={isLoading}>
                                 <UploadIcon />
