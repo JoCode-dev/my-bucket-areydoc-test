@@ -1,4 +1,4 @@
-// File: /Users/romaricgueu/Desktop/my-bucket-AreyDoc-test/app/layout.tsx
+// File: /Users/macbookair/Desktop/JoCode/Dev/my-bucket-areydoc-test/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

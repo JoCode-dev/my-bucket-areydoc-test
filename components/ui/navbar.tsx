@@ -1,13 +1,11 @@
-import React from "react";
+import { Box, Container } from "@radix-ui/themes";
 
-interface NavbarProps {
-    children: React.ReactNode
-}
-
-const Navbar: React.FC<NavbarProps> = ({children}) => {
+const Navbar = () => {
     return (
-        <nav>
-            {children}
+        <nav className="border-2">
+            <Box className="w-screen p-5">
+                Hello World
+            </Box>
         </nav>
     )
 }
