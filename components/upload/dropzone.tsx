@@ -5,9 +5,11 @@ import CloudUploadIcon from "./cloud-upload-icon";
 import React, { useEffect, useRef, useState } from "react";
 import { BookmarkIcon } from "@radix-ui/react-icons";
 import CardFile from "../ui/card-file";
+import { getFileType } from "@/utils/file";
+import Image from "next/image";
 
 interface DropZoneProps {
-    file: string | File | null;
+    file: File | null;
     setFile: (e: File | null) => void;
     fileEnter: boolean;
     setFileEnter: (e: boolean) => void;
@@ -52,6 +54,14 @@ const DropZone: React.FC<DropZoneProps> = ({ file, fileEnter, setFile, setFileEn
         if (file instanceof File) setFileName(file.name)
     }, [file])
 
+    if (isLoading) {
+        return (
+            <div className="w-full flex items-center justify-center h-[250px]">
+                <Image src="https://www.icegif.com/wp-content/uploads/2023/07/icegif-1262.gif" className="dark:invert" alt="Box empty" width={240} height={20} />
+            </div>
+        )
+    }
+
 
     return (
         <Card draggable onDragOver={(e) => onDragOver(e)}
@@ -77,7 +87,7 @@ const DropZone: React.FC<DropZoneProps> = ({ file, fileEnter, setFile, setFileEn
                 </Flex>
                 :
                 <Flex className="w-full h-[250px]" align="center" justify="center" direction="column">
-                    <CardFile fileName={fileName} removeFile={() => setFile(null)} />
+                    <CardFile fileName={fileName} icon={getFileType(file?.type)} removeFile={() => setFile(null)} />
                 </Flex>
             }
 

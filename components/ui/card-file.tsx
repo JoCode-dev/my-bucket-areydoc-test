@@ -8,7 +8,7 @@ import FileIcon from "./file-icon";
 import CloseIcon from "./close-icon";
 
 interface CardFileProps {
-    icon?: string;
+    icon?: string | null;
     fileName: string;
     removeFile: () => void;
 }
@@ -20,7 +20,7 @@ const CardFile: React.FC<CardFileProps> = ({ icon, fileName, removeFile }) => {
         <Flex direction="column" align="center" justify="center" className="fixed border-4 border-zinc-200/30 w-44 h-52 rounded-xl">
             <CloseIcon onClick={removeFile} className="absolute -top-5 -right-5 h-9 w-9 bg-red-500" />
 
-            <FileIcon icon="Image" />
+            <FileIcon icon={icon} />
 
             <span className="text-center leading-5 my-5">{substr(fileName, 15)}</span>
         </Flex>

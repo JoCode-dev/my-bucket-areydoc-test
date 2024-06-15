@@ -5,6 +5,6 @@
  * @param length number
  * @returns string
  */
-export const substr = (name: string, length: number) => {
+export const substr = (name: string | any, length: number) => {
     return name?.length > length ? `${name.slice(0, length)}..${name.slice(-4)}` : name
 }

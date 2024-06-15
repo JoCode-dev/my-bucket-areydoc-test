@@ -5,6 +5,9 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'shop.apaym.com'
+            }, {
+                protocol: "https",
+                "hostname": "www.icegif.com"
             }
         ]
     }

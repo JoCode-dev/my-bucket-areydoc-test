@@ -2,19 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Flex, Grid, Text } from '@radix-ui/themes';
 import FileItem from './file-item';
+import { FilesType } from '@/app/page';
 
 interface ListFilesProps {
-    files: string[]
+    files: FilesType[],
+    setFiles: (files: FilesType[]) => void;
 }
 
-const ListFiles: React.FC<ListFilesProps> = ({ files }) => {
+const ListFiles: React.FC<ListFilesProps> = ({ files, setFiles }) => {
     return (
         <Box className="h-full min-h-[90vh]" px={"9"} py="3">
             {
-                files ?
-                    <Grid columns={{ initial: '1', sm: "3", md: '5', lg: "6" }} gap="8" width="auto">
+                files?.length ?
+                    <Grid columns={{ initial: '1', sm: "3", md: '5', lg: "6" }} gap="8" width="auto" justify="center" align="center">
                         {files.map((item, index) => (
-                            <FileItem key={index} file={item} />
+                            <FileItem key={index} file={item} setFiles={setFiles} />
                         ))}
                     </Grid>
                     : <Flex direction="column" align="center" justify="center" className="h-[80vh]">
@@ -22,8 +24,6 @@ const ListFiles: React.FC<ListFilesProps> = ({ files }) => {
                         <Text size="5" className="text-zinc-400">No files found</Text>
                     </Flex>
             }
-
-
         </Box>
     )
 }
