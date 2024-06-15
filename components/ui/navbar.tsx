@@ -8,8 +8,8 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Flex direction="row" justify="between" className="w-screen p-5">
-                <Box as="div" className="">
+            <Flex direction="row" justify="between" className="w-screen p-5 pl-14">
+                <Box as="div">
                     <Image
                         src="/arey_light.png"
                         alt="Vercel Logo"
@@ -24,7 +24,7 @@ const Navbar = () => {
                     as="div"
                 >
                     <Box as="div">
-                        <Button onClick={() => toggleModal()}>
+                        <Button style={{ cursor: "pointer" }} onClick={() => toggleModal()}>
                             Upload a file
                         </Button>
                     </Box>
