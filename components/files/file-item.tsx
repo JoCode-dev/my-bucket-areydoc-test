@@ -44,9 +44,7 @@ const FileItem: React.FC<FileItemProps> = ({ file, setFiles }) => {
     }, [file])
 
     const handleClick = () => {
-        setTimeout(() => {
-            window.open(file.data, "_blanket")
-        })
+        window.open(file.data, "_blanket");
     }
 
     const deletFile = (e: Event) => {
