@@ -7,6 +7,7 @@ import FileIcon from "@/components/ui/file-icon"
 import CloseIcon from '../ui/close-icon';
 import { FilesType } from '@/app/page';
 import { substr } from '@/utils/string';
+import Link from 'next/link';
 
 interface FileItemProps {
     file: FilesType,
@@ -43,10 +44,6 @@ const FileItem: React.FC<FileItemProps> = ({ file, setFiles }) => {
         getFile();
     }, [file])
 
-    const handleClick = () => {
-        window.open(file.data, "_blanket");
-    }
-
     const deletFile = (e: Event) => {
         e.stopPropagation()
         const storedFiles = localStorage.getItem("files");
@@ -73,18 +70,20 @@ const FileItem: React.FC<FileItemProps> = ({ file, setFiles }) => {
 
 
     return (
-        <Box height="16rem" width="12rem" className="animate-in fade-in zoom-in relative cursor-pointer rounded-2xl border-2 border-zinc-400 transition hover:scale-105" onClick={handleClick}>
-            <CloseIcon onClick={(e: Event) => deletFile(e)} className="absolute top-2 right-2 h-9 w-9 bg-red-200 hover:bg-red-500" />
-            <Flex direction="column" align="center" justify="center" className="h-full pt-10">
-                <FileIcon icon={dataFile?.type} />
-                <Box as='div' className="mt-2 text-center">
-                    <Text size="4" className="text-zinc-500 dark:text-white">{substr(dataFile?.fileName, 15)}</Text>
-                </Box>
-                <Box as='div' className="text-center">
-                    <Text size="3" className="text-zinc-800 dark:text-zinc-500" weight="medium">{formatBytes(dataFile?.size)}</Text>
-                </Box>
-            </Flex>
-        </Box>
+        <Link href={file.data} target="_blank">
+            <Box height="16rem" width="12rem" className="animate-in fade-in zoom-in relative cursor-pointer rounded-2xl border-2 border-zinc-400 transition hover:scale-105">
+                <CloseIcon onClick={(e: Event) => deletFile(e)} className="absolute top-2 right-2 h-9 w-9 bg-red-200 hover:bg-red-500" />
+                <Flex direction="column" align="center" justify="center" className="h-full pt-10">
+                    <FileIcon icon={dataFile?.type} />
+                    <Box as='div' className="mt-2 text-center">
+                        <Text size="4" className="text-zinc-500 dark:text-white">{substr(dataFile?.fileName, 15)}</Text>
+                    </Box>
+                    <Box as='div' className="text-center">
+                        <Text size="3" className="text-zinc-800 dark:text-zinc-500" weight="medium">{formatBytes(dataFile?.size)}</Text>
+                    </Box>
+                </Flex>
+            </Box>
+        </Link>
     )
 }
 
