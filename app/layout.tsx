@@ -6,7 +6,7 @@ import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from "next-themes";
 import { ModalProvider } from "@/providers/ModalProvider";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({ weight: ["300"], subsets: ['latin'] });
 
@@ -29,6 +29,7 @@ export default function RootLayout({
           enableSystem>
           <Theme>
             <ModalProvider>
+              <SpeedInsights />
               {children}
             </ModalProvider>
           </Theme>
